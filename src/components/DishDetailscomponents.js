@@ -14,10 +14,10 @@ class Dishdetail extends Component {
                     <p>-- {comment.author},
                     &nbsp;
                     {new Intl.DateTimeFormat('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: '2-digit'
-                        }).format(new Date(comment.date))}
+                        year: 'numeric',
+                        month: 'long',
+                        day: '2-digit'
+                    }).format(new Date(comment.date))}
                     </p>
                 </li>
             )
@@ -57,11 +57,13 @@ class Dishdetail extends Component {
         if (dish == null) {
             return (<div></div>)
         }
-       
+
         return (
-            <div className='row'>
-                {this.renderDish(dish)}
-                {this.renderComments(dish.comments)}
+            <div className='container'>
+                <div className='row'>
+                    {this.renderDish(dish)}
+                    {this.renderComments(dish.comments)}
+                </div>
             </div>
         )
     }
