@@ -4,15 +4,18 @@ import './App.css';
 
 import Main from './components/MainComponents';
 import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 
 class App extends Component {
   
   render(){
   return (
+    <BrowserRouter>
     <div className="App">
       <Main/>
     </div>
+    </BrowserRouter>
   );
   }
 }
